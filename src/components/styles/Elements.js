@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Tag = styled.span`
+export const Tag = styled.p`
     display: inline-block;
     color: #fff;
     background: ${(props) => props.color};
@@ -18,7 +18,7 @@ export const P = styled.p`
     width: 280px;
     font-size: 13px;
     line-height: 1.4;
-    color: #aaa;
+    color: ${(props) => props.theme.subtext};
     margin: 20px 0;
 `;
 

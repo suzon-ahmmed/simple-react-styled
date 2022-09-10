@@ -81,6 +81,7 @@ p {
 
 .buttons a:after {
   content: "";
+  /* color: #627cf0; */
   position: absolute;
   top: 0;
   right: -10px;

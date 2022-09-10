@@ -5,14 +5,14 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  background: #262626;
+  background: ${(props) => props.theme.bgColor};
   width: 100%;
   height: 100vh;
 `;
 
 export const CardContainer = styled.div`
   position: relative;
-  background: #1e1e1e;
+  background:${(props) => props.theme.CardCpmtainerColor};
   height: 350px;
   width: 550px;
   overflow: hidden;
@@ -27,6 +27,16 @@ export const ContentContainer = styled.div`
   left: 20px;
   z-index: 3;
 `;
+export const ToggleSwitch = styled.div`
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 8px 0;
+  & span{
+    color: ${(props) => props.theme.ToggleSwitchColor};
+  }
+`;
+
 
 export const ButtonContainer = styled.div`
   width: fit-content;
@@ -37,10 +47,10 @@ export const ButtonContainer = styled.div`
     overflow: hidden;
     position: relative;
     font-size: 11px;
-    color: #aaa;
+    color: ${(props) => props.theme.btnColor};
     text-decoration: none;
     padding: 10px 15px;
-    border: 1px solid #333;
+    border: 1px solid ${(props) => props.theme.btnHoverBg};
     font-weight: bold;
     &:after {
       content: "";
@@ -48,7 +58,7 @@ export const ButtonContainer = styled.div`
       top: 0;
       right: -10px;
       width: 0%;
-      background: #262626;
+      background: ${(props) => props.theme.btnHoverBg};
       height: 100%;
       z-index: -1;
       transition: width 0.3s ease-in-out;
@@ -73,3 +83,5 @@ export const ButtonContainer = styled.div`
     }
   }
 `;
+
+
